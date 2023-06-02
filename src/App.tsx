@@ -7,7 +7,8 @@ import {
   IonRouterOutlet,
   IonTabBar,
   IonTabButton,
-  IonTabs
+  IonTabs,
+  setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
 import { square, triangle, images } from 'ionicons/icons';
@@ -38,6 +39,8 @@ import './theme/variables.css';
 /* Global CSS */
 import './global.css';
 
+setupIonicReact();
+
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -56,7 +59,7 @@ const App: React.FC = () => (
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
             <IonIcon icon={images} />
-            <IonLabel>Photos</IonLabel>
+            <IonLabel>Gallery</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon icon={square} />
