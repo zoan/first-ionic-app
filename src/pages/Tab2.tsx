@@ -23,7 +23,7 @@ const Tab2: React.FC = () => {
         <IonGrid>
           <IonRow>
             {photos.map((photo, index) => (
-              <IonCol size="6" key={index}>
+              <IonCol size="6" key={photo.filepath}>
                 <IonImg onClick={() => setPhotoToDelete(photo)} src={photo.webviewPath} />
               </IonCol>
             ))}
